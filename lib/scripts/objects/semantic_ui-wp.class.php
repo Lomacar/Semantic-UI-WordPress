@@ -215,9 +215,13 @@ class wp implements data_class {
 		if (!$id) {
 			$id = get_the_id();
 		}
-		$excerpt  = get_the_excerpt($id);
-		// $excerpt .= '<a class="ui mini blue button article read more" href="'.get_permalink($id).'#more-'.$id.'" title="'. esc_attr("Read '".get_the_title($id)."'").'">'.__( 'Continue Reading &raquo;').'</a>';
-		return $excerpt;
+		// $excerpt  = get_the_excerpt($id);
+		// // $excerpt .= '<a class="ui mini blue button article read more" href="'.get_permalink($id).'#more-'.$id.'" title="'. esc_attr("Read '".get_the_title($id)."'").'">'.__( 'Continue Reading &raquo;').'</a>';
+		// return $excerpt;
+		
+		$content = apply_filters('the_content', get_the_content($id));
+		
+		return wp_trim_words( $content, 80);
 	}
 	
 	public function post_has_img($id = FALSE) {
