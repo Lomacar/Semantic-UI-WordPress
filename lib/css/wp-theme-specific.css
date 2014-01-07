@@ -356,8 +356,28 @@ ul > li:before {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#eaf3f9',GradientType=0 ); /* IE6-9 */
 }
 
+#cta-img {
+	vertical-align: bottom;
+}
+
+#cta-img-container {
+	height: 388px;
+}
+
+#cta-img-container, #cta-img-container tr, #cta-img-container tr td {
+	background: none;
+	border: none;
+}
+
+#cta-img-container, #cta-text-container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #cta-text {
-	max-height: 280px;
+	height: 280px;
+	overflow: auto;
+	margin-bottom: 1rem;
 }
 
 #main-content {

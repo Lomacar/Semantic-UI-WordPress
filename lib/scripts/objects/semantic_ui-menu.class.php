@@ -36,7 +36,7 @@ class menu {
 		}
 		
 		$the_id = trim(sprintf($conf['id'],str_replace(' ', '-', $menu_id)));
-		$the_class = trim(sprintf($conf['class'], "ui inverted menu"));
+		$the_class = trim(sprintf($conf['class'], "ui small menu"));
 		
 		$menu = $data_class->get_menu($menu_id);
 		

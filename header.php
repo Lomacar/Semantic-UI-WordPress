@@ -91,30 +91,17 @@ $_sui = \semantic_ui\vars::$ref;
 	
 	<body <?php body_class(); ?>>
 		<div class="ui segment no overflow" id="cta-header">
-			<div class="ui stacking page grid">
+			<div class="ui stackable page grid">
 				<div class="row">
-					<div class="ten wide column">
+					<div class="twelve wide column">
 						
-						
-						<div class="ui small menu">
-						  <a class="active item">
-						    <i class="home icon"></i> Home
-						  </a>
-						  <a class="item">
-						    <i class="mail icon"></i> Messages
-						  </a>1
-						  <div class="right menu">
-						    <div class="item">
-						      <div class="ui icon input">
-						        <input type="text" placeholder="Search...">
-						        <i class="search link icon"></i>
-						      </div>
-						    </div>
-					    </div>
-						</div>
+						<?php
+						// Navigation that doesn't suck
+						echo $_sui->menu->display('main-nav');
+						?>
 						
 					</div>
-					<div class="six wide column">
+					<div class="four wide column">
 						<div class="basic center aligned ui segment">
 							<img src="http://placehold.it/250x75&text=Your%20Logo" alt="Your Mini Logo">
 						</div>
@@ -123,21 +110,27 @@ $_sui = \semantic_ui\vars::$ref;
 				<div class="row">
 					<div class="one wide column">&nbsp;</div>
 					<div class="eight wide column">
-						<h1>Your Call-To-Action Text!</h1>
-						<div class="ui basic segment no overflow" id="cta-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, itaque, veritatis ea fugit qui porro unde ad recusandae debitis magnam quam neque explicabo vitae quos autem officia cumque dignissimos molestiae praesentium nesciunt repudiandae eveniet quibusdam labore est esse. Delectus, aspernatur nesciunt unde minus blanditiis harum vel ducimus inventore sed exercitationem.
-							<br><br>
-							<div class="ui basic right floated segment">
-								<div class="ui buttons">
-								  <div class="ui button">Free Trial</div>
-								  <div class="ui positive button">Buy Now</div>
+						<div id="cta-text-container">
+							<h1>Your Call-To-Action Text!</h1>
+							<div class="ui basic segment no overflow" id="cta-text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, itaque, veritatis ea fugit qui porro unde ad recusandae debitis magnam quam neque explicabo vitae quos autem officia cumque dignissimos molestiae praesentium nesciunt repudiandae eveniet quibusdam labore est esse. Delectus, aspernatur nesciunt unde minus blanditiis harum vel ducimus inventore sed exercitationem.
+								<br><br>
+								<div class="ui basic right floated segment">
+									<div class="ui buttons">
+									  <div class="ui button">Free Trial</div>
+									  <div class="ui positive button">Buy Now</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="one wide column">&nbsp;</div>
 					<div class="five wide column">
-						<img class="negative bottom margin" src="http://placehold.it/350x400&text=Product%20Image%20(350x400)" alt="Product Image">
+						<table class="negative bottom margin" id="cta-img-container">
+							<tr>
+								<td><img id="cta-img" src="http://placehold.it/350x400&text=Product%20Image%20(350x400)" alt="Product Image"></td>
+							</tr>
+						</table>
 					</div>
 					<div class="one wide column">&nbsp;</div>
 				</div>
